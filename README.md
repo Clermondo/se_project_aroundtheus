@@ -1,5 +1,9 @@
 # Project 3: Around The U.S.
 
+# This project shows off the travel destinations of an explorer.
+
+# Project created with flex box and grids. HTML, CSS, and Git with BEM format.
+
 ### Overview
 
 - Intro
