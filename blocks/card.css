@@ -9,6 +9,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .card__image {
@@ -23,6 +24,10 @@
   padding: 25px 20px 25px 20px;
   align-items: center;
   justify-content: space-between;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .card__like-button {
@@ -30,4 +35,14 @@
   width: 21px;
   height: 18px;
   border: none;
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    overflow: hidden;
+    height: 282px;
+  }
 }
