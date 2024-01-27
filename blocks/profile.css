@@ -60,6 +60,12 @@
   margin: 0;
 }
 
+@media screen and (max-width: 703px) {
+  .profile__title {
+    font-size: 25px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .profile {
     background-color: black;
