@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   padding-top: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .profile__info {
@@ -23,6 +27,7 @@
 
 .profile__edit-button:hover {
   opacity: 60%;
+  cursor: url(../images/likehover.png), auto;
 }
 
 .profile__add-button {
@@ -34,6 +39,7 @@
 }
 
 .profile__add-button:hover {
+  cursor: url(../images/likehover.png), auto;
   opacity: 60%;
 }
 
@@ -137,13 +143,27 @@
 }
 
 @media screen and (max-width: 320px) {
+  .profile {
+    margin-top: 42px;
+  }
+
   .profile__title {
-    font-size: 15px;
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
+  .profile__description {
+    margin-top: 14px;
+    font-size: 14px;
   }
 
   .profile__add-button {
-    margin: 0;
-    margin: 100px;
+    margin-top: 36px;
     width: 80%;
+  }
+
+  .profile__image {
+    margin: 0 auto;
+    margin-top: 42px;
   }
 }
