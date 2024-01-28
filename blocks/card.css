@@ -10,6 +10,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
+  margin: 0;
 }
 
 .card__image {
@@ -24,9 +25,6 @@
   padding: 25px 20px 25px 20px;
   align-items: center;
   justify-content: space-between;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   max-width: 100%;
 }
 
@@ -37,12 +35,5 @@
   border: none;
 }
 
-@media screen and (max-width: 480px) {
-  .card {
-    display: flex;
-    border-radius: 10px;
-    flex-direction: column;
-    overflow: hidden;
-    height: 282px;
-  }
+.card__like-button:hover {
 }
