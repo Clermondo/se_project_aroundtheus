@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .profile__info {
@@ -95,7 +95,6 @@
 
   .profile__title {
     max-width: 196px;
-    font-size: 22px;
     line-height: 26.63px;
     margin-top: 24px;
   }
@@ -133,14 +132,6 @@
     width: 80%;
   }
 
-  .profile__image {
-    margin-right: 0;
-  }
-
-  .profile__title {
-    margin-top: 24px;
-  }
-
   .profile__edit-button {
     margin-top: 24px;
   }
@@ -158,16 +149,20 @@
 
   .profile__description {
     margin-top: 14px;
-    font-size: 14px;
   }
 
   .profile__add-button {
     margin-top: 36px;
-    width: 80%;
+    width: 282px;
   }
 
   .profile__image {
     margin: 0 auto;
-    margin-top: 42px;
+  }
+
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(255, 255, 255, 1);
   }
 }
