@@ -1,27 +1,27 @@
 const initialCards = [
   {
     title: "Yosemite Valley",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
+    link: "https://unsplash.com/photos/a-person-walking-across-a-snow-covered-street--DhozujVOF8",
   },
   {
     title: "Lake Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg",
+    link: "https://unsplash.com/photos/a-person-walking-across-a-snow-covered-street--DhozujVOF8",
   },
   {
     title: "Bald Mountains",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg",
+    link: "https://unsplash.com/photos/a-person-walking-across-a-snow-covered-street--DhozujVOF8",
   },
   {
     title: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg",
+    link: "https://unsplash.com/photos/a-person-walking-across-a-snow-covered-street--DhozujVOF8",
   },
   {
     title: "Vanoise National Park",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg",
+    link: "https://unsplash.com/photos/a-person-walking-across-a-snow-covered-street--DhozujVOF8",
   },
   {
     title: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
+    link: "https://unsplash.com/photos/a-person-walking-across-a-snow-covered-street--DhozujVOF8",
   },
 ];
 
