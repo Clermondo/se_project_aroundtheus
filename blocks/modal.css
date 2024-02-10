@@ -60,6 +60,10 @@
   right: -45px;
 }
 
+.modal__closed {
+  display: none;
+}
+
 #modal__input {
   width: 358px;
   height: 27.26px;
