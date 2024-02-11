@@ -64,7 +64,7 @@
   display: none;
 }
 
-#modal__input {
+.modal__input {
   width: 358px;
   height: 27.26px;
   margin-left: 36px;
@@ -74,7 +74,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-#modal__input:nth-child(2) {
+.modal__input:nth-child(2) {
   margin-bottom: 48px;
 }
 
@@ -132,7 +132,7 @@
     width: 238px;
   }
 
-  #modal__input {
+  .modal__input {
     width: 238px;
     height: 27px;
     margin-left: 22px;
@@ -140,7 +140,7 @@
     margin-bottom: 30px;
   }
 
-  #modal__input:nth-child(2) {
+  .modal__input:nth-child(2) {
     margin-bottom: 45px;
   }
 
