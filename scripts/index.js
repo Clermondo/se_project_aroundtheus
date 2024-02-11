@@ -40,23 +40,22 @@ const cardTemplate =
 const cardListEl = document.querySelector(".cards__list");
 
 function closePopup() {
-  profileEditModal.classList.remove("modal__opened");
+  profileEditModal.classList.remove("modal_opened");
 }
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
-  const cardImageEl = (cardElement.querySelector(".card__image").src =
-    cardData.link);
+  const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
   cardTitleEl.textContent = cardData.name;
-  cardImageEl.textContent = cardData.link;
+  cardImageEl.src = cardData.link = cardData.link;
   return cardElement;
 }
 
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal__opened");
+  profileEditModal.classList.add("modal_opened");
 });
 
 modalCloseButton.addEventListener("click", () => {
