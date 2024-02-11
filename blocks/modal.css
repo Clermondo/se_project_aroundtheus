@@ -115,6 +115,8 @@
     position: absolute;
     top: -52px;
     right: 3px;
+    height: 26px;
+    width: 26px;
   }
 
   .modal__heading {
