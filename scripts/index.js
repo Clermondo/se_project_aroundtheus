@@ -40,27 +40,27 @@ const cardTemplate =
 const cardListEl = document.querySelector(".cards__list");
 
 function closePopup() {
-  profileEditModal.classList.remove("modal_opened");
+  profileEditModal.classList.remove("modal-opened");
 }
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
+  cardImageEl.src = cardData.link = cardData.link;
+  // const cat = (Image.alt = (.card__title));
+  // console.log(cat);
   const cardTitleEl = cardElement.querySelector(".card__title");
   cardTitleEl.textContent = cardData.name;
-  cardImageEl.src = cardData.link = cardData.link;
   return cardElement;
 }
 
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_opened");
+  profileEditModal.classList.add("modal-opened");
 });
 
-modalCloseButton.addEventListener("click", () => {
-  closePopup();
-});
+modalCloseButton.addEventListener("click", closePopup);
 
 profileEditForm.addEventListener("submit", (e) => {
   e.preventDefault();
