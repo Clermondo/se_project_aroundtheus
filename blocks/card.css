@@ -3,6 +3,7 @@
   border-radius: 10px;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 
 .card__title {
@@ -38,6 +39,28 @@
 
 .card__like-button:hover {
   opacity: 1;
+}
+
+.card__like-button_active {
+  background: url(../images/Union.svg);
+  width: 21px;
+  height: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.card__delete-button {
+  width: 21px;
+  height: 18px;
+  background: transparent url(../images/Trash.svg) center no-repeat;
+  background-size: 21px 18px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 @media screen and (max-width: 320px) {
