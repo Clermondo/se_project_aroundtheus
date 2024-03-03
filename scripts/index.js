@@ -25,9 +25,14 @@ const initialCards = [
   },
 ];
 
-//Declarations
+/*=============================================
+=            Declarations           =
+=============================================*/
+
 const modalWindow = document.querySelector("#profile-edit-modal");
 const editForm = document.querySelector(".modal__form");
+const placesList = document.querySelector(".cards__list");
+
 ////////////////////////////////////////////////////////
 const profileEditButton = document.querySelector("#profile-edit-button");
 const modalCloseButton = document.querySelector("#profile-close-button");
@@ -38,8 +43,6 @@ const titleInputValue = document.querySelector("#profile-title-input");
 const descriptionInputValue = document.querySelector(
   "#profile-description-input"
 );
-const cardTemplate =
-  document.querySelector("#card-template").content.firstElementChild;
 const cardListEl = document.querySelector(".cards__list");
 
 //Card add////////////////////////////////////////////////
@@ -47,7 +50,9 @@ const cardAddModal = document.querySelector("#profile-add-modal");
 const cardAddButton = document.querySelector("#add-button");
 const addCloseButton = document.querySelector("#add-close-button");
 
-//Functions///////////////////////////////////////////////
+/*=============================================
+=            Functions            =
+=============================================*/
 
 function toggleModalWindow() {
   if (!modalWindow.classList.contains("modal__opened")) {
@@ -80,6 +85,13 @@ function getCardElement(cardData) {
   return cardElement;
 }
 
+/*=============================================
+=            Templates            =
+=============================================*/
+const cardTemplate = document
+  .querySelector("#card-template")
+  .content.querySelector(".card__tlist");
+
 function formSubmitHandler(evt) {
   e.preventDefault();
 
@@ -88,7 +100,13 @@ function formSubmitHandler(evt) {
   toggleModalWindow(profileEditModal);
 }
 
-//Event Listeners/////////////////////////////////////////////
+/*=============================================
+=            Event Listener            =
+=============================================*/
 editForm.addEventListener("submit", formSubmitHandler);
 profileEditButton.addEventListener("click", toggleModalWindow);
 modalCloseButton.addEventListener("click", toggleModalWindow);
+
+initialCards.forEach(function (card) {
+  const card = cardTemplate.cloneNode(true);
+});
