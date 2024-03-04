@@ -100,6 +100,12 @@
   margin-bottom: 18.49;
 }
 
+.modal__preview-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 550px) {
 }
 

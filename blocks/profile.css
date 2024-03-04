@@ -73,6 +73,15 @@
   max-width: 375px;
 }
 
+.profile__add-modal {
+  background: transparent;
+  max-height: 75vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
 @media screen and (max-width: 800px) {
   .profile__edit-button {
     margin-right: 10px;
