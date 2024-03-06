@@ -5,16 +5,19 @@
   right: 0;
   bottom: 0;
   z-index: 999;
-
-  /*align-items: center;
-  justify-content: center;*/
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 19px;
-  display: none;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.6s, opacity 0.6s linear;
 }
 
 .modal__opened {
-  display: flex;
+  /* display: flex; */
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.6s linear;
 }
 
 .modal__container {
@@ -106,6 +109,34 @@
   object-fit: cover;
 }
 
+.modal__preview {
+  background-color: rgba(255, 255, 255, 1);
+  margin: auto;
+  color: black;
+  position: relative;
+  border-radius: 10px;
+  width: 430px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+  background: transparent;
+  max-height: 75vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.modal__preview_close {
+  background-image: url("../images/CloseIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -45px;
+  right: -45px;
+}
 @media screen and (max-width: 550px) {
 }
 
