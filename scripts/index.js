@@ -55,6 +55,7 @@ const descriptionInputValue = document.querySelector(
   "#profile-description-input"
 );
 const cardListEl = document.querySelector(".cards__list");
+const editSaveBtn = document.querySelector(".modal__edit-save-button");
 
 /*=============================================
 =            Templates            =
@@ -91,6 +92,13 @@ function handleAddFormSubmit(evt) {
   toggleModalWindow(editModalWindow);
 }
 
+function handleProfileEditSubmit(e) {
+  e.preventDefault();
+  profileTitle.textContent = titleInputValue.value;
+  profileDescription.textContent = descriptionInputValue.value;
+  toggleModalWindow(editForm);
+}
+
 function generateCard(card) {
   const cardElement = cardTemplate.cloneNode(true);
   cardElement.querySelector(".card__title").textContent = card.name;
@@ -122,19 +130,26 @@ function generateCard(card) {
 /*=============================================
 =            Event Listener            =
 =============================================*/
-editForm.addEventListener("submit", formSubmitHandler);
 
 addModalWindow.addEventListener("submit", handleAddFormSubmit);
+
+function closePopup(popup) {
+  popup.classList.remove("modal__opened");
+}
 
 profileEditButton.addEventListener("click", () => {
   titleInputValue.value = profileTitle.textContent;
   descriptionInputValue.value = profileDescription.textContent;
+  editForm.addEventListener("submit", handleProfileEditSubmit);
   toggleModalWindow(editModalWindow);
 });
 
 profileEditCloseButton.addEventListener("click", () =>
   toggleModalWindow(editModalWindow)
 );
+
+editSaveBtn.addEventListener("click", () => closePopup(editModalWindow));
+
 addModalBtn.addEventListener("click", () => toggleModalWindow(addModalWindow));
 
 addCloseButton.addEventListener("click", () =>
