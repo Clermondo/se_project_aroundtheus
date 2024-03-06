@@ -147,6 +147,15 @@
   top: -45px;
   right: -45px;
 }
+
+.modal__preview-caption {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  color: white;
+  margin: 0;
+}
+
 @media screen and (max-width: 550px) {
 }
 

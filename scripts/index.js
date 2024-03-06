@@ -38,6 +38,7 @@ const previewImageElement = document.querySelector(".modal__preview-image");
 const previewModal = document.querySelector(".modal__preview");
 const addModalTitle = document.querySelector("#profile-add-title-input");
 const addModalUrl = document.querySelector("#profile-url-input");
+const previewCaption = document.querySelector(".modal__preview-caption");
 /*=============================================
 =            Buttons            =
 =============================================*/
@@ -120,7 +121,7 @@ function generateCard(card) {
 
   cardImageEl.addEventListener("click", function () {
     previewImageElement.src = card.link;
-    console.log(previewImageModalWindow);
+    previewCaption.textContent = cardTitleEl.textContent;
     toggleModalWindow(previewImageModalWindow);
   });
 
