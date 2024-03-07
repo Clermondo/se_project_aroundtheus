@@ -31,7 +31,7 @@ const initialCards = [
 
 const editModalWindow = document.querySelector("#profile-edit-modal");
 const addModalWindow = document.querySelector("#profile-add-modal");
-const previewImageModalWindow = document.querySelector(".profile-add-modal");
+const previewImageModalWindow = document.querySelector(".preview-modal");
 const editForm = document.querySelector(".modal__form");
 const placesList = document.querySelector(".cards__list");
 const previewImageElement = document.querySelector(".modal__preview-image");

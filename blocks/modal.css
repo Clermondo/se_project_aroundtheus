@@ -141,11 +141,11 @@
   background-size: contain;
   border: none;
   background-color: transparent;
-  width: 40px;
-  height: 40px;
   position: absolute;
-  top: -45px;
-  right: -45px;
+  top: -52px;
+  right: 3px;
+  height: 26px;
+  width: 26px;
 }
 
 .modal__preview-caption {
