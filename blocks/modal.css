@@ -13,11 +13,29 @@
   transition: visibility 0s 0.6s, opacity 0.6s linear;
 }
 
-.modal__opened {
+.modal-preview-add {
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.modal_opened {
   /* display: flex; */
   visibility: visible;
   opacity: 1;
   transition: visibility 0s, opacity 0.6s linear;
+}
+
+.modal_closed {
+  display: none;
 }
 
 .modal__container {
@@ -61,10 +79,6 @@
   position: absolute;
   top: -45px;
   right: -45px;
-}
-
-.modal__closed {
-  display: none;
 }
 
 .modal__input {
@@ -119,7 +133,7 @@
   object-fit: cover;
 }
 
-.modal__preview {
+.modal__preview-add {
   background-color: rgba(255, 255, 255, 1);
   margin: auto;
   color: black;
@@ -221,5 +235,13 @@
     font-size: 14px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
+  }
+
+  .modal__edit-save-button {
+    width: 238px;
+    height: 46px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 25px;
   }
 }
