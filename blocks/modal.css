@@ -13,20 +13,6 @@
   transition: visibility 0s 0.6s, opacity 0.6s linear;
 }
 
-.modal-preview-add {
-  font-family: "Inter", Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: none;
-}
-
 .modal_opened {
   /* display: flex; */
   visibility: visible;
@@ -133,7 +119,7 @@
   object-fit: cover;
 }
 
-.modal__preview-add {
+.modal__preview {
   background-color: rgba(255, 255, 255, 1);
   margin: auto;
   color: black;

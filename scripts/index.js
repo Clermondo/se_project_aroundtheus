@@ -154,13 +154,12 @@ profileEditButton.addEventListener("click", () => {
   descriptionInputValue.value = profileDescription.textContent;
   editForm.addEventListener("submit", handleProfileEditSubmit);
   openPopup(editModalWindow);
+  editSaveBtn.addEventListener("click", () => closePopup(editModalWindow));
 });
 
 profileEditCloseButton.addEventListener("click", () =>
   closePopup(editModalWindow)
 );
-
-editSaveBtn.addEventListener("click", () => closePopup(editModalWindow));
 
 addModalBtn.addEventListener("click", () => openPopup(addModalWindow));
 
