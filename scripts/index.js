@@ -33,6 +33,11 @@ const editModalWindow = document.querySelector("#profile-edit-modal");
 const addModalWindow = document.querySelector("#profile-add-modal");
 const addModalTitle = document.querySelector("#profile-add-title-input");
 const addModalUrl = document.querySelector("#profile-url-input");
+const modalInput = document.querySelector(".modal__input");
+const editTitleInput = document.querySelector("#profile-title-input");
+const editDescriptionInput = document.querySelector(
+  "#profile-description-input"
+);
 //=======================================================================
 const editForm = document.querySelector(".modal__form");
 const addModalSubmitBtn = document.querySelector(".modal__button_submit");
@@ -142,6 +147,8 @@ addModalWindow.addEventListener("submit", handleAddFormSubmit);
 
 profileEditButton.addEventListener("click", () => {
   openPopup(editModalWindow);
+  editTitleInput.value = profileTitle.textContent;
+  editDescriptionInput.value = profileDescription.textContent;
 });
 
 editForm.addEventListener("submit", handleProfileEditSubmit);
