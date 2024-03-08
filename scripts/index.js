@@ -92,27 +92,21 @@ function renderCard(cardData, wrapper) {
   wrapper.prepend(cardElement);
 }
 
-// function handleProfileFormSubmit(evt) {
-//   e.preventDefault();
-//   profileTitle.textContent = titleInputValue.value;
-//   profileDescription.textContent = descriptionInputValue.value;
-//   toggleModalWindow(editModalWindow);
-// }
-
 function handleAddFormSubmit(evt) {
   evt.preventDefault();
   const name = addModalTitle.value;
   const link = addModalUrl.value;
   renderCard({ name, link }, placesList);
-  closePopup(editModalWindow);
+  closePopup(addModalWindow);
   evt.target.reset();
 }
 
-function handleProfileEditSubmit(e) {
-  e.preventDefault();
+function handleProfileEditSubmit(evt) {
+  openPopup(editModalWindow);
+  evt.preventDefault();
   profileTitle.textContent = titleInputValue.value;
   profileDescription.textContent = descriptionInputValue.value;
-  closePopup(editForm);
+  closePopup(editModalWindow);
 }
 
 function generateCard(card) {
@@ -146,25 +140,23 @@ function generateCard(card) {
 /*=============================================
 =            Event Listener            =
 =============================================*/
+addModalBtn.addEventListener("click", () => openPopup(addModalWindow));
 
 addModalWindow.addEventListener("submit", handleAddFormSubmit);
-addModalSubmitBtn.addEventListener("click", () => {
-  closePopup(addModalWindow);
-});
 
 profileEditButton.addEventListener("click", () => {
-  titleInputValue.value = profileTitle.textContent;
-  descriptionInputValue.value = profileDescription.textContent;
-  editForm.addEventListener("submit", handleProfileEditSubmit);
   openPopup(editModalWindow);
-  editSaveBtn.addEventListener("click", () => closePopup(editModalWindow));
+
+  editForm.addEventListener("submit", handleProfileEditSubmit);
 });
+
+/*=============================================
+=            Close buttons  - Event Listeners          =
+=============================================*/
 
 profileEditCloseButton.addEventListener("click", () =>
   closePopup(editModalWindow)
 );
-
-addModalBtn.addEventListener("click", () => openPopup(addModalWindow));
 
 addCloseButton.addEventListener("click", () => closePopup(addModalWindow));
 
