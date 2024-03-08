@@ -33,11 +33,11 @@ const editModalWindow = document.querySelector("#profile-edit-modal");
 const addModalWindow = document.querySelector("#profile-add-modal");
 const addModalTitle = document.querySelector("#profile-add-title-input");
 const addModalUrl = document.querySelector("#profile-url-input");
-
+//=======================================================================
 const editForm = document.querySelector(".modal__form");
 const addModalSubmitBtn = document.querySelector(".modal__button_submit");
 const placesList = document.querySelector(".cards__list");
-
+//=======================================================================
 const previewImageModalWindow = document.querySelector(".preview-modal");
 const previewImageElement = document.querySelector(".modal__preview-image");
 const previewModal = document.querySelector(".modal__preview");
@@ -50,11 +50,11 @@ const previewCaption = document.querySelector(".modal__preview-caption");
 const profileEditButton = document.querySelector("#profile-edit-button");
 const editSaveBtn = document.querySelector(".modal__edit-save-button");
 const addModalBtn = document.querySelector(".profile__add-button");
-
-const profileEditCloseButton = document.querySelector("#profile-close-button");
-const addCloseButton = document.querySelector("#add-close-button");
-const previewCloseButton = document.querySelector(".modal__preview_close");
-
+//=====================================================================
+const profileEditCloseButton = document.querySelector(".modal__close");
+const addCloseButton = document.querySelector(".modal__close");
+const previewCloseButton = document.querySelector(".modal__close");
+//=====================================================================
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const titleInputValue = document.querySelector("#profile-title-input");
@@ -72,12 +72,6 @@ const cardTemplate = document
 /*=============================================
 =            Functions            =
 =============================================*/
-
-// const closeButtons = document.querySelector(".popup__close");
-// closeButtons.forEach((button) => {
-//   const popup = button.closest(".popup");
-//   button.addEventListener('click', () => closePopup(popup));
-// });
 
 function openPopup(popup) {
   popup.classList.add("modal_opened");
@@ -153,15 +147,18 @@ profileEditButton.addEventListener("click", () => {
 /*=============================================
 =            Close buttons  - Event Listeners          =
 =============================================*/
+const closeButtons = document.querySelectorAll(".modal__close");
+closeButtons.forEach((button) => {
+  const popup = button.closest(".modal");
+  button.addEventListener("click", () => closePopup(popup));
+});
 
-profileEditCloseButton.addEventListener("click", () =>
-  closePopup(editModalWindow)
-);
+// closeButtons.addEventListener("click", () => closePopup(editModalWindow));
 
-addCloseButton.addEventListener("click", () => closePopup(addModalWindow));
+// closeButtons.addEventListener("click", () => closePopup(addModalWindow));
 
-previewCloseButton.addEventListener("click", () =>
-  closePopup(previewImageModalWindow)
-);
+// closeButtons.addEventListener("click", () =>
+//   closePopup(previewImageModalWindow)
+// );
 
 initialCards.forEach((cardData) => renderCard(cardData, placesList));
