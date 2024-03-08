@@ -105,7 +105,6 @@ function handleProfileEditSubmit(evt) {
 
 function generateCard(card) {
   const cardElement = cardTemplate.cloneNode(true);
-  cardElement.querySelector(".card__title").textContent = card.name;
   const likeButton = cardElement.querySelector(".card__like-button");
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
@@ -119,12 +118,15 @@ function generateCard(card) {
 
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
+  cardElement.querySelector(".card__title").textContent = card.name;
   cardImageEl.src = card.link;
   cardImageEl.alt = card.name;
 
   cardImageEl.addEventListener("click", function () {
     previewImageElement.src = card.link;
+    previewImageElement.alt = card.name;
     previewCaption.textContent = cardTitleEl.textContent;
+    // previewImageElement.alt = cardTitleEl.textContent;
     openPopup(previewImageModalWindow);
   });
 
@@ -140,9 +142,9 @@ addModalWindow.addEventListener("submit", handleAddFormSubmit);
 
 profileEditButton.addEventListener("click", () => {
   openPopup(editModalWindow);
-
-  editForm.addEventListener("submit", handleProfileEditSubmit);
 });
+
+editForm.addEventListener("submit", handleProfileEditSubmit);
 
 /*=============================================
 =            Close buttons  - Event Listeners          =
