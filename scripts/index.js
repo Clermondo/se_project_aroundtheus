@@ -101,7 +101,6 @@ function handleAddFormSubmit(evt) {
 }
 
 function handleProfileEditSubmit(evt) {
-  openPopup(editModalWindow);
   evt.preventDefault();
   profileTitle.textContent = titleInputValue.value;
   profileDescription.textContent = descriptionInputValue.value;
@@ -123,7 +122,7 @@ function generateCard(card) {
 
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
-  cardElement.querySelector(".card__title").textContent = card.name;
+  cardTitleEl.textContent = card.name;
   cardImageEl.src = card.link;
   cardImageEl.alt = card.name;
 
