@@ -72,3 +72,13 @@ const config = {
 };
 
 enableValidation(config);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closePopup(editModalWindow);
+    closePopup(addModalWindow);
+  }
+});
+
+modal.addEventListener("click", () => closePopup(editModalWindow));
+modal.addEventListener("click", () => closePopup(addModalWindow));

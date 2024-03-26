@@ -38,6 +38,8 @@ const editTitleInput = document.querySelector("#profile-title-input");
 const editDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
+const modal = document.querySelector(".modal");
+
 //=======================================================================
 const editForm = document.querySelector(".modal__form");
 const addModalSubmitBtn = document.querySelector(".modal__button_submit");
@@ -160,13 +162,5 @@ closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closePopup(popup));
 });
-
-// closeButtons.addEventListener("click", () => closePopup(editModalWindow));
-
-// closeButtons.addEventListener("click", () => closePopup(addModalWindow));
-
-// closeButtons.addEventListener("click", () =>
-//   closePopup(previewImageModalWindow)
-// );
 
 initialCards.forEach((cardData) => renderCard(cardData, placesList));
