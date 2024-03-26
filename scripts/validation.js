@@ -82,3 +82,14 @@ document.addEventListener("keydown", function (e) {
 
 modal.addEventListener("click", () => closePopup(editModalWindow));
 modal.addEventListener("click", () => closePopup(addModalWindow));
+
+// // Function to check if the click was outside the pop-up
+// function handleClickOutside(event) {
+//   // Check if the click target is outside the pop-up
+//   if (!addModalWindow.contains(event.target)) {
+//     // Close the pop-up
+//     addModalWindow.style.display = "none";
+//   }
+// }
+// // Add the event listener to the document
+// document.addEventListener("click", handleClickOutside);

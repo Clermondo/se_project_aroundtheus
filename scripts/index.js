@@ -142,8 +142,9 @@ function generateCard(card) {
 /*=============================================
 =            Event Listener            =
 =============================================*/
-addModalBtn.addEventListener("click", () => openPopup(addModalWindow));
-
+addModalBtn.addEventListener("click", () => {
+  openPopup(addModalWindow);
+});
 addModalWindow.addEventListener("submit", handleAddFormSubmit);
 
 profileEditButton.addEventListener("click", () => {
