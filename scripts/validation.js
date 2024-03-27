@@ -81,7 +81,21 @@ document.addEventListener("keydown", function (e) {
 });
 
 modal.addEventListener("click", () => closePopup(editModalWindow));
-addModalWindow.addEventListener("click", () => closePopup(addModalWindow));
+addModalWindow.addEventListener("click", () => {
+  closePopup(addModalWindow);
+});
+
+document
+  .querySelector(".modal__container")
+  .addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+document
+  .querySelector(".modal__add_container")
+  .addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
 
 // function handleClickOutside(event) {
 //   // Check if the pop-up is visible and the click is outside the pop-up

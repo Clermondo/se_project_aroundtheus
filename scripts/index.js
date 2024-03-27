@@ -39,6 +39,7 @@ const editDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const modal = document.querySelector(".modal");
+const modalContainer = document.querySelector(".modal__container");
 
 //=======================================================================
 const editForm = document.querySelector(".modal__form");
