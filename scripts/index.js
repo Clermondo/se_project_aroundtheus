@@ -142,6 +142,7 @@ function generateCard(card) {
 /*=============================================
 =            Event Listener            =
 =============================================*/
+
 addModalBtn.addEventListener("click", () => {
   openPopup(addModalWindow);
 });

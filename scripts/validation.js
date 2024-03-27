@@ -81,15 +81,18 @@ document.addEventListener("keydown", function (e) {
 });
 
 modal.addEventListener("click", () => closePopup(editModalWindow));
-modal.addEventListener("click", () => closePopup(addModalWindow));
+addModalWindow.addEventListener("click", () => closePopup(addModalWindow));
 
-// // Function to check if the click was outside the pop-up
 // function handleClickOutside(event) {
-//   // Check if the click target is outside the pop-up
-//   if (!addModalWindow.contains(event.target)) {
+//   // Check if the pop-up is visible and the click is outside the pop-up
+//   if (
+//     addModalWindow.style.display !== "none" &&
+//     !addModalWindow.contains(event.target)
+//   ) {
 //     // Close the pop-up
 //     addModalWindow.style.display = "none";
 //   }
 // }
-// // Add the event listener to the document
+
+// // Add this event listener only after initializing the pop-up and open button logic
 // document.addEventListener("click", handleClickOutside);
