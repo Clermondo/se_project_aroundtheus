@@ -67,6 +67,10 @@
   right: -45px;
 }
 
+.modal__close:hover {
+  cursor: url(../images/likehover.png), auto;
+}
+
 .modal__input {
   width: 358px;
   height: 27.26px;
@@ -82,7 +86,6 @@
 }
 
 .modal__button {
-  width: 358px;
   height: 50.15px;
   margin-left: 36px;
   margin-right: 36px;
@@ -91,17 +94,11 @@
   background-color: rgba(0, 0, 0, 1);
 }
 
-.modal__edit-save-button {
-  width: 358px;
-  height: 50.15px;
-  margin-left: 36px;
-  margin-right: 36px;
-  margin-bottom: 36.51px;
-  border-radius: 2px;
-  background-color: rgba(0, 0, 0, 1);
+.modal__button:hover {
+  cursor: url(../images/likehover.png), auto;
 }
 
-#modal__save {
+.modal__saved {
   color: rgba(255, 255, 255, 1);
   font-weight: 400;
   font-size: 18px;

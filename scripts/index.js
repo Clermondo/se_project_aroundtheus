@@ -39,6 +39,7 @@ const editDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const modal = document.querySelector(".modal");
+const modals = document.querySelectorAll(".modal");
 const modalContainer = document.querySelector(".modal__container");
 
 //=======================================================================
@@ -88,6 +89,24 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove("modal_opened");
 }
+
+const handlePopupClose = (evt) => {
+  if (
+    evt.target.classList.contains(editModalWindow) ||
+    evt.target.classList.contains(addModalWindow)
+  ) {
+    closePopup(evt.currentTarget);
+  }
+};
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    if (Array.from(event.target.classList).includes("modal")) {
+      closePopup(editModalWindow);
+      closePopup(addModalWindow);
+    }
+  });
+});
 
 function renderCard(cardData, wrapper) {
   const cardElement = generateCard(cardData);
@@ -143,6 +162,12 @@ function generateCard(card) {
 /*=============================================
 =            Event Listener            =
 =============================================*/
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    closePopup(openedModal);
+  }
+});
 
 addModalBtn.addEventListener("click", () => {
   openPopup(addModalWindow);
