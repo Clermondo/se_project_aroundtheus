@@ -20,7 +20,7 @@ function checkInputValidity(formEl, inputEl, options) {
   }
 }
 
-function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
+function validityForButton(inputEls, submitButton, { inactiveButtonClass }) {
   let foundInvalid = false;
 
   inputEls.forEach((inputEl) => {
@@ -28,7 +28,10 @@ function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
       foundInvalid = true;
     }
   });
+}
 
+function toggleButtonState() {
+  validityForButton();
   if (foundInvalid) {
     submitButton.classList.add(inactiveButtonClass);
     submitButton.disabled = true;
@@ -47,7 +50,7 @@ function setEventListeners(formEl, options) {
   inputEls.forEach((inputEl) => {
     inputEl.addEventListener("input", (e) => {
       checkInputValidity(formEl, inputEl, options);
-      toggleButtonState(inputEls, submitButton, options);
+      validityForButton(inputEls, submitButton, options);
     });
   });
 }
