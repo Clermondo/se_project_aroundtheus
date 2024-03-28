@@ -24,10 +24,14 @@
 
 .popup__button_disabled {
   /* background-image: url("../images/submitreject.png"); */
-  background-color: white;
+  background-color: grey;
   border: 1px solid gray;
 }
 
+.popup__button_disabled:hover {
+  cursor: auto;
+}
+
 .popup__button_disabled .modal__saved {
-  color: grey;
+  color: white;
 }

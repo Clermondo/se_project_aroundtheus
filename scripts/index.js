@@ -84,10 +84,19 @@ const cardTemplate = document
 
 function openPopup(popup) {
   popup.classList.add("modal_opened");
+  document.addEventListener("keydown", closeModalByEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalByEscape);
+}
+
+function closeModalByEscape(e) {
+  if (e.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    closePopup(openedModal);
+  }
 }
 
 const handlePopupClose = (evt) => {
@@ -102,8 +111,7 @@ const handlePopupClose = (evt) => {
 modals.forEach((modal) => {
   modal.addEventListener("click", (event) => {
     if (Array.from(event.target.classList).includes("modal")) {
-      closePopup(editModalWindow);
-      closePopup(addModalWindow);
+      closePopup(modal);
     }
   });
 });
@@ -162,12 +170,6 @@ function generateCard(card) {
 /*=============================================
 =            Event Listener            =
 =============================================*/
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    const openedModal = document.querySelector(".modal_opened");
-    closePopup(openedModal);
-  }
-});
 
 addModalBtn.addEventListener("click", () => {
   openPopup(addModalWindow);
