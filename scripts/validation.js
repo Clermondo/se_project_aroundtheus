@@ -20,16 +20,6 @@ function checkInputValidity(formEl, inputEl, options) {
   }
 }
 
-// function checkFormValidity(inputEls, submitButton, { inactiveButtonClass }) {
-//   let foundInvalid = false;
-
-//   inputEls.forEach((inputEl) => {
-//     if (!inputEl.validity.valid) {
-//       foundInvalid = true;
-//     }
-//   });
-// }
-
 const checkFormValidity = (inputEls) =>
   inputEls.every((inputEl) => inputEl.validity.valid);
 
