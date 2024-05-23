@@ -8,7 +8,7 @@ export default class Card {
 
   _getTemplate() {
     const cardTemplate = document
-      .querySelector("#card-template")
+      .querySelector("this._cardSelector")
       .content.querySelector(".card__tlist");
 
     return cardTemplate.cloneNode(true);

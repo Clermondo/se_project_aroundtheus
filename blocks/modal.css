@@ -227,4 +227,8 @@
     margin-right: 22px;
     margin-bottom: 25px;
   }
+
+  .modal__saved {
+    margin: auto;
+  }
 }
