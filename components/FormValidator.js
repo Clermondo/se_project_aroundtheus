@@ -47,8 +47,7 @@ export default class FormValidator {
       this._submitButton.classList.remove(this._settings.inactiveButtonClass);
       this._submitButton.disabled = false;
     } else {
-      this._submitButton.classList.add(this._settings.inactiveButtonClass);
-      this._submitButton.disabled = true;
+      this.disableButton();
     }
   }
 
@@ -85,9 +84,6 @@ export default class FormValidator {
   }
 
   _handleFormSubmit() {
-    setTimeout(() => {
-      this.resetValidation();
-      this.disableButton();
-    }, 1000);
+    this.disableButton();
   }
 }

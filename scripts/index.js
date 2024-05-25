@@ -32,9 +32,9 @@ const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__button_submit",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
 };
 
 const editModalWindow = document.querySelector("#profile-edit-modal");
@@ -103,7 +103,7 @@ const handleAddCardFormSubmit = (event) => {
   const cardElement = createCard(cardData);
   placesList.prepend(cardElement);
   closePopup(addModalWindow);
-  addCardFormValidator.resetValidation();
+  addCardFormValidator.disableButton();
 };
 
 const handleEditProfileFormSubmit = (event) => {
