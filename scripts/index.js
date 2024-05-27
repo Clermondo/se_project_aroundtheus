@@ -103,7 +103,7 @@ const handleAddCardFormSubmit = (event) => {
   const cardElement = createCard(cardData);
   placesList.prepend(cardElement);
   closePopup(addModalWindow);
-  addCardFormValidator.disableButton();
+  addCardFormValidator.reset();
 };
 
 const handleEditProfileFormSubmit = (event) => {
