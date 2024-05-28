@@ -153,6 +153,18 @@
   margin: 0;
 }
 
+.modal__button_submit {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+}
+
+.modal__button_submit:not(.popup__button_disabled) {
+  background-color: black;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 550px) {
 }
 

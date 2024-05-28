@@ -23,9 +23,8 @@
 }
 
 .popup__button_disabled {
-  /* background-image: url("../images/submitreject.png"); */
-  background-color: grey;
-  border: 1px solid gray;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .popup__button_disabled:hover {
