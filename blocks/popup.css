@@ -22,14 +22,14 @@
   border-bottom: 1px solid red;
 }
 
-.popup__button_disabled {
+/* .popup__button_disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
 .popup__button_disabled:hover {
   cursor: auto;
-}
+} */
 
 .popup__button_disabled .modal__saved {
   color: white;
